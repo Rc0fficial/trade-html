@@ -74,8 +74,8 @@
                 class="flex flex-col items-start justify-start gap-[8px] text-[#71717A] text-[16px] font-normal"
               >
                 <li
-                  class="w-full tab flex items-start justify-start gap-[6px] py-[11px] cursor-pointer rounded-[4px] border border-white pl-[10px]"
-                  onclick="activateTab(0)"
+                  class="w-full main-tab flex items-start justify-start gap-[6px] py-[11px] cursor-pointer rounded-[4px] border border-white pl-[10px] active"
+                  onclick="activateMainTab(this, 'myAccounts')"
                 >
                   <img
                     src="/assets/svg/profile-circle.svg"
@@ -85,18 +85,20 @@
                   <span class="tab-text">My Accounts</span>
                 </li>
                 <li
-                  class="w-full tab flex items-center justify-start gap-[6px] py-[11px] cursor-pointer rounded-[4px] border border-white pl-[10px]"
-                  onclick="activateTab(1)"
+                  class="w-full main-tab flex items-center justify-start gap-[6px] py-[11px] cursor-pointer rounded-[4px] border border-white pl-[10px]"
+                  onclick="activateMainTab(this, 'deposit')"
                 >
                   <img
                     src="/assets/svg/camera.svg"
                     alt="camera"
                     class="text-[#71717A] stroke-green"
-                  /><span class="tab-text">Deposit</span>
+                  />
+                  <span class="tab-text">Deposit</span>
                 </li>
+
                 <li
-                  class="w-full tab flex items-center justify-start gap-[6px] py-[11px] cursor-pointer rounded-[4px] border border-white pl-[10px]"
-                  onclick="activateTab(2)"
+                  class="w-full main-tab flex items-center justify-start gap-[6px] py-[11px] cursor-pointer rounded-[4px] border border-white pl-[10px]"
+                  onclick="activateMainTab(this, 'withdrawal')"
                 >
                   <img src="/assets/svg/atm.svg" alt="atm" /><span
                     class="tab-text"
@@ -104,8 +106,8 @@
                   >
                 </li>
                 <li
-                  class="w-full tab flex items-center justify-start gap-[6px] py-[11px] cursor-pointer rounded-[4px] border border-white pl-[10px]"
-                  onclick="activateTab(3)"
+                  class="w-full main-tab flex items-center justify-start gap-[6px] py-[11px] cursor-pointer rounded-[4px] border border-white pl-[10px]"
+                  onclick="activateMainTab(this, 'transactionHistory')"
                 >
                   <img src="/assets/svg/schedule.svg" alt="schedule" /><span
                     class="tab-text"
@@ -114,42 +116,43 @@
                 </li>
 
                 <li
-                  class="w-full tab flex items-center justify-start gap-[6px] py-[11px] cursor-pointer rounded-[4px] border border-white pl-[10px]"
-                  onclick="activateTab(4)"
+                  class="w-full main-tab flex items-center justify-start gap-[6px] py-[11px] cursor-pointer rounded-[4px] border border-white pl-[10px]"
+                  onclick="activateMainTab(this, 'analytics')"
                 >
                   <img src="/assets/svg/pie-chart.svg" alt="pie-chart" />
                   <span class="tab-text">Analytics</span>
                 </li>
                 <li
-                  class="w-full tab flex items-center justify-start gap-[6px] py-[11px] cursor-pointer rounded-[4px] border border-white pl-[10px]"
-                  onclick="activateTab(5)"
+                  class="w-full main-tab flex items-center justify-start gap-[6px] py-[11px] cursor-pointer rounded-[4px] border border-white pl-[10px]"
+                  onclick="activateMainTab(this, 'investmentWallet')"
                 >
                   <img src="/assets/svg/wallet.svg" alt="wallet" />
                   <span class="tab-text">Investment Wallet</span>
                 </li>
 
                 <li
-                  class="w-full tab flex items-center justify-start gap-[6px] py-[11px] cursor-pointer rounded-[4px] border border-white pl-[10px]"
-                  onclick="activateTab(6)"
+                  class="w-full main-tab flex items-center justify-start gap-[6px] py-[11px] cursor-pointer rounded-[4px] border border-white pl-[10px]"
+                  onclick="activateMainTab(this, 'socialTrading')"
                 >
                   <img src="/assets/svg/share.svg" alt="share" />
                   <span class="tab-text">Social Trading</span>
                 </li>
                 <li
-                  class="w-full tab flex items-center justify-start gap-[6px] py-[11px] cursor-pointer rounded-[4px] border border-white pl-[10px]"
-                  onclick="activateTab(7)"
+                  class="w-full main-tab flex items-center justify-start gap-[6px] py-[11px] cursor-pointer rounded-[4px] border border-white pl-[10px]"
+                  onclick="activateMainTab(this, 'performance')"
                 >
                   <img src="/assets/svg/podium.svg" alt="podium" />
                   <span class="tab-text">Performance</span>
                 </li>
                 <li
-                  class="w-full tab flex items-center justify-start gap-[6px] py-[11px] cursor-pointer rounded-[4px] border border-white pl-[10px]"
-                  onclick="activateTab(8)"
+                  class="w-full main-tab flex items-center justify-start gap-[6px] py-[11px] cursor-pointer rounded-[4px] border border-white pl-[10px]"
+                  onclick="activateMainTab(this, 'settings')"
                 >
                   <img src="/assets/svg/setting.svg" alt="setting" />
                   <span class="tab-text">Settings</span>
                 </li>
               </ul>
+              
             </div>
           </div>
           <div class="static bottom-0 px-[20px] py-[25px] border-t-2">
@@ -178,7 +181,13 @@
           </div>
         </div>
       </section>
-      <section
+      <div id="myAccounts" class="main-tab-content active">
+        <!-- Content for My Accounts tab -->
+        Content for My Accounts tab
+      </div>
+      <section id="settings" class="main-tab-content">
+        <!-- Content for Deposit tab -->
+        <div
         class="bg-[#fafafa] w-full px-[25px] py-[25px] flex flex-col gap-[25px]"
       >
         <div
@@ -274,12 +283,12 @@
               <p class="text-[#71717A] text-[16px] font-normal">
                 Verify Account
               </p>
-              <div class="grid grid-cols-3">
+              <div class="grid grid-cols-3 gap-[25px]">
                 <div
                   class="bg-white px-[25px] py-[25px] flex flex-col gap-[13px] border-[1px] rounded-[4px] w-full"
                 >
                   <h2 class="text-[#18181B] text-[20px] font-medium">
-                    Confirm email and phone
+                    1. Confirm email and phone
                   </h2>
                   <p class="text-[#979797] text-[14px] font-normal">
                     Enter your details please
@@ -318,7 +327,7 @@
                     <p class="text-[#71717A] text-[12px] font-normal">
                       Deposit Limit
                     </p>
-                    <p class="text-[#71717A] text-[24px] font-medium">
+                    <p class="text-[#71717A] text-[20px] font-medium">
                       2,000 USD
                     </p>
                     <p class="text-[#979797] text-[12px] font-normal">
@@ -330,7 +339,94 @@
                   >
                     Complete
                   </button>
-                  
+                </div>
+                <div
+                  class="bg-white px-[25px] py-[25px] flex flex-col gap-[13px] border-[1px] rounded-[4px] w-full"
+                >
+                  <h2 class="text-[#979797] text-[20px] font-medium">
+                    2. Verify your identity
+                  </h2>
+                  <p class="text-[#979797] text-[14px] font-normal">
+                    Provide a document confirming your name
+                  </p>
+
+                  <div
+                    class="rounded-[4px] border-[1px] border-[#E6E6E6] py-[9px] px-[8px] flex items-start justify-between"
+                  >
+                    <input
+                      type="text"
+                      placeholder="Add profile information"
+                      class="text-[#71717A] text-[12px] font-normal ml-2 outline-none border-none outline-none"
+                    />
+                    <img src="/assets/svg/folder-2.svg" alt="folder-2" />
+                  </div>
+                  <div
+                    class="bg-white px-[25px] py-[25px] flex flex-col gap-[6px] border-[1px] rounded-[4px] w-full"
+                  >
+                    <p class="text-[#979797] text-[12px] font-normal">
+                      Deposit Limit
+                    </p>
+                    <p class="text-[#979797] text-[20px] font-medium">
+                      2,000 USD
+                    </p>
+                    <p class="text-[#979797] text-[12px] font-normal">
+                      This limit will apply for 30 days after the first deposit
+                    </p>
+                  </div>
+                  <div>
+                    <button
+                      class="bg-[#F0F3FA] py-[8px] px-[43px] text-center text-[12px] font-[500] text-[#979797] rounded-[4px] cursor-pointer max-w-[150px]"
+                    >
+                      Complete
+                    </button>
+                    <p class="text-[#979797] text-[12px] font-normal mt-[8px]">
+                      Complete step 1 to continue
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="bg-white px-[25px] py-[25px] flex flex-col gap-[13px] border-[1px] rounded-[4px] w-full"
+                >
+                  <h2 class="text-[#979797] text-[20px] font-medium">
+                    3. Verify residential address
+                  </h2>
+                  <p class="text-[#979797] text-[14px] font-normal">
+                    You will need to provide proof of your place of residence
+                  </p>
+
+                  <div
+                    class="rounded-[4px] border-[1px] border-[#E6E6E6] py-[9px] px-[8px] flex items-start justify-between"
+                  >
+                    <input
+                      type="text"
+                      placeholder="Add profile information"
+                      class="text-[#71717A] text-[12px] font-normal ml-2 outline-none border-none outline-none"
+                    />
+                    <img src="/assets/svg/folder-2.svg" alt="folder-2" />
+                  </div>
+                  <div
+                    class="bg-white px-[25px] py-[25px] flex flex-col gap-[6px] border-[1px] rounded-[4px] w-full"
+                  >
+                    <p class="text-[#979797] text-[12px] font-normal">
+                      Deposit Limit
+                    </p>
+                    <p class="text-[#979797] text-[20px] font-medium">
+                      Unlimited
+                    </p>
+                    <p class="text-[#979797] text-[12px] font-normal">
+                      Depending on selected payment method
+                    </p>
+                  </div>
+                  <div>
+                    <button
+                      class="bg-[#F0F3FA] py-[8px] px-[43px] text-center text-[12px] font-[500] text-[#979797] rounded-[4px] cursor-pointer max-w-[150px]"
+                    >
+                      Complete
+                    </button>
+                    <p class="text-[#979797] text-[12px] font-normal mt-[8px]">
+                      Complete step 2 to continue
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -552,7 +648,9 @@
             </div>
           </div>
         </div>
+      </div>
       </section>
+    
     </main>
 
     <script src="script.js"></script>

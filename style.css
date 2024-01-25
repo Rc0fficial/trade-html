@@ -1,0 +1,12 @@
+.active-tab {
+    background-color: black !important;
+    color: white !important;
+  }
+
+  .tab-content {
+    display: none;
+  }
+
+  .tab-content.active {
+    display: block;
+  }

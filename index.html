@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="">
+    <header class="border-b-2">
+      <nav
+        class="py-[20px] px-[20px] mx-auto flex items-center justify-between"
+      >
+        <div><img src="/assets//images//logo.png" alt="logo" /></div>
+        <div class="flex items-center justify-center text-center">
+          <div class="mr-[12px]">
+            <img
+              width="14px"
+              height="14px"
+              src="/assets//svg/size-icon.svg"
+              alt="size icon"
+            />
+          </div>
+          <p class="text-[500] font-medium mr-[8px]">1500432 USD</p>
+          <a href="/test"
+            ><button
+              class="bg-[#13B440] py-[4px] px-[14px] rounded-[4px] text-white mr-[10px]"
+            >
+              Live
+            </button></a
+          >
+          <a href=""
+            ><img
+              class="mr-[25px]"
+              src="/assets/svg/chevron-down.svg"
+              alt="chevron-down"
+          /></a>
+          <a href=""
+            ><img
+              class="mr-[25px]"
+              src="/assets/svg/notification.svg"
+              alt="notification"
+          /></a>
+          <a href=""
+            ><img
+              class="mr-[25px]"
+              src="/assets/svg/hamburger.svg"
+              alt="hamburger"
+          /></a>
+        </div>
+      </nav>
+    </header>
+    <main class="flex relative">
+      <section class="static max-w-[240px] w-full border-r-2">
+        <div class="relative h-full flex flex-col justify-between">
+          <div>
+            <div class="border-b-2">
+              <div class="py-[25px] px-[20px]">
+                <div
+                  class="mx-auto rounded-[4px] border-[1px] border-[#E6E6E6] py-[9px] pl-[8px] flex flex-wrap"
+                >
+                  <img src="/assets/svg/search.svg" alt="search" />
+                  <input
+                    type="text"
+                    placeholder="Search"
+                    class="text-[#71717A] text-[12px] font-medium max-w-[156px] ml-2 outline-none border-none outline-none"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="py-[25px] px-[20px]">
+              <ul
+                class="flex flex-col items-start justify-start gap-[8px] text-[#71717A] text-[16px] font-normal"
+              >
+                <li
+                  class="w-full tab flex items-start justify-start gap-[6px] py-[11px] cursor-pointer rounded-[4px] border border-white pl-[10px]"
+                  onclick="activateTab(0)"
+                >
+                  <img
+                    src="/assets/svg/profile-circle.svg"
+                    alt="profile-circle"
+                    class="text-[#71717A] stroke-green"
+                  />
+                  <span class="tab-text">My Accounts</span>
+                </li>
+                <li
+                  class="w-full tab flex items-center justify-start gap-[6px] py-[11px] cursor-pointer rounded-[4px] border border-white pl-[10px]"
+                  onclick="activateTab(1)"
+                >
+                  <img
+                    src="/assets/svg/camera.svg"
+                    alt="camera"
+                    class="text-[#71717A] stroke-green"
+                  /><span class="tab-text">Deposit</span>
+                </li>
+                <li
+                  class="w-full tab flex items-center justify-start gap-[6px] py-[11px] cursor-pointer rounded-[4px] border border-white pl-[10px]"
+                  onclick="activateTab(2)"
+                >
+                  <img src="/assets/svg/atm.svg" alt="atm" /><span
+                    class="tab-text"
+                    >Withdrawal</span
+                  >
+                </li>
+                <li
+                  class="w-full tab flex items-center justify-start gap-[6px] py-[11px] cursor-pointer rounded-[4px] border border-white pl-[10px]"
+                  onclick="activateTab(3)"
+                >
+                  <img src="/assets/svg/schedule.svg" alt="schedule" /><span
+                    class="tab-text"
+                    >Transaction History</span
+                  >
+                </li>
+
+                <li
+                  class="w-full tab flex items-center justify-start gap-[6px] py-[11px] cursor-pointer rounded-[4px] border border-white pl-[10px]"
+                  onclick="activateTab(4)"
+                >
+                  <img src="/assets/svg/pie-chart.svg" alt="pie-chart" />
+                  <span class="tab-text">Analytics</span>
+                </li>
+                <li
+                  class="w-full tab flex items-center justify-start gap-[6px] py-[11px] cursor-pointer rounded-[4px] border border-white pl-[10px]"
+                  onclick="activateTab(5)"
+                >
+                  <img src="/assets/svg/wallet.svg" alt="wallet" />
+                  <span class="tab-text">Investment Wallet</span>
+                </li>
+
+                <li
+                  class="w-full tab flex items-center justify-start gap-[6px] py-[11px] cursor-pointer rounded-[4px] border border-white pl-[10px]"
+                  onclick="activateTab(6)"
+                >
+                  <img src="/assets/svg/share.svg" alt="share" />
+                  <span class="tab-text">Social Trading</span>
+                </li>
+                <li
+                  class="w-full tab flex items-center justify-start gap-[6px] py-[11px] cursor-pointer rounded-[4px] border border-white pl-[10px]"
+                  onclick="activateTab(7)"
+                >
+                  <img src="/assets/svg/podium.svg" alt="podium" />
+                  <span class="tab-text">Performance</span>
+                </li>
+                <li
+                  class="w-full tab flex items-center justify-start gap-[6px] py-[11px] cursor-pointer rounded-[4px] border border-white pl-[10px]"
+                  onclick="activateTab(8)"
+                >
+                  <img src="/assets/svg/setting.svg" alt="setting" />
+                  <span class="tab-text">Settings</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="static bottom-0 px-[20px] py-[25px] border-t-2">
+            <div class="flex items-start justify-start gap-[35px]">
+              <div class="flex items-center justify-center gap-[5px]">
+                <img
+                  src="/assets/svg/information-circle.svg"
+                  alt="information-circle"
+                /><span class="text-[#71717A] text-[12px] font-[400]"
+                  >Help</span
+                >
+              </div>
+              <div class="flex items-center justify-center gap-[5px]">
+                <img src="/assets/svg/global.svg" alt="global" /><span
+                  class="text-[#71717A] text-[12px] font-[400]"
+                  >Website</span
+                >
+              </div>
+            </div>
+            <div
+              class="text-[#979797] text-[14px] font-[400] py-[25px] flex flex-col gap-[15px]"
+            >
+              <p>Terms and Conditions</p>
+              <p>Privacy Policy</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="bg-[#fafafa] w-full px-[25px] py-[25px] flex flex-col gap-[25px]"
+      >
+        <div
+          class="bg-white px-[25px] py-[25px] flex flex-col gap-[20px] border-[1px] rounded-[4px]"
+        >
+          <p class="text-[#18181B] text-[20px] font-medium">Settings</p>
+          <div class="flex items-start justify-start gap-[10px]">
+            <div
+              class="tab-item bg-[#F0F3FA] py-[4px] px-[24px] text-center text-[12px] font-[500] text-[#71717A] rounded-[4px] cursor-pointer"
+              onclick="activateTabItem(this, 'profile')"
+            >
+              Profile
+            </div>
+            <div
+              class="tab-item bg-[#F0F3FA] py-[4px] px-[24px] text-center text-[12px] font-[500] text-[#71717A] rounded-[4px] cursor-pointer"
+              onclick="activateTabItem(this, 'security')"
+            >
+              Security Settings
+            </div>
+            <div
+              class="tab-item bg-[#F0F3FA] py-[4px] px-[24px] text-center text-[12px] font-[500] text-[#71717A] rounded-[4px] cursor-pointer"
+              onclick="activateTabItem(this, 'terminals')"
+            >
+              Trading Terminals
+            </div>
+            <div
+              class="tab-item bg-[#F0F3FA] py-[4px] px-[24px] text-center text-[12px] font-[500] text-[#71717A] rounded-[4px] cursor-pointer"
+              onclick="activateTabItem(this, 'conditions')"
+            >
+              Trading Conditions
+            </div>
+            <div
+              class="tab-item bg-[#F0F3FA] py-[4px] px-[24px] text-center text-[12px] font-[500] text-[#71717A] rounded-[4px] cursor-pointer"
+              onclick="activateTabItem(this, 'vps')"
+            >
+              Virtual Private Server
+            </div>
+          </div>
+          
+        </div>
+        <div id="profile" class="tab-content active">
+          <!-- Content for the Profile tab -->
+          Profile Content
+        </div>
+        <div id="security" class="tab-content">
+          <!-- Content for the Security Settings tab -->
+          Security Settings Content
+        </div>
+        <div id="terminals" class="tab-content">
+          <!-- Content for the Trading Terminals tab -->
+          Trading Terminals Content
+        </div>
+        <div id="conditions" class="tab-content">
+          <!-- Content for the Trading Conditions tab -->
+          Trading Conditions Content
+        </div>
+        <div id="vps" class="tab-content">
+          <!-- Content for the Virtual Private Server tab -->
+          <div class="flex flex-col gap-[25px]">
+            <div
+              class="bg-white px-[25px] py-[25px] flex flex-col gap-[10px] border-[1px] rounded-[4px]"
+            >
+              <p class="text-[#18181B] text-[20px] font-medium">
+                Virtual Private Server
+              </p>
+              <p class="text-[14px] font-normal text-[#979797] max-w-[555px]">
+                Virtual Private Servers allow you to run automated trading
+                strategies with fast and reliable execution.
+              </p>
+            </div>
+            <div
+              class="bg-[#f8e8e8] px-[25px] py-[15px] flex flex-col gap-[6px] border-[1px] rounded-[4px] border-[#F04444]"
+            >
+              <p class="text-[#F04444] text-[20px] font-medium">
+                You do not currently qualify for a free VPS
+              </p>
+              <p class="text-[14px] font-normal text-[#71717A] max-w-[555px]">
+                To qualify for a free VPS, you need to meet one of the following
+                criteria:
+              </p>
+            </div>
+            <div class="grid grid-cols-4 gap-4">
+              <div
+                class="col-span-2 bg-white px-[25px] py-[25px] flex flex-col gap-[10px] border-[1px] rounded-[4px]"
+              >
+                <p class="text-[#18181B] text-[20px] font-medium">
+                  Balance Required: 1,000 USD
+                </p>
+                <p class="text-[14px] font-normal text-[#979797] max-w-[555px]">
+                  Your balance across all your trading accounts needs to be at
+                  least 1,000 USD to immediately qualify for a free VPS. If your
+                  balance is between 500–999 USD, you can still get a free VPS
+                  if you meet the trading volume requirements below.
+                </p>
+                <div class="flex justify-between w-full mt-[5px]">
+                  <div
+                    class="px-[15px] py-[15px] border-[1px] rounded-[4px] border-[#13B440] bg-[#E5FFF5] flex items-center justify-start text-center gap-[15px]"
+                  >
+                    <p
+                      class="text-[14px] font-normal text-[#13B440] text-center"
+                    >
+                      Current Balance
+                    </p>
+                    <p
+                      class="text-[16px] text-[#13B440] font-medium text-center"
+                    >
+                      500 USD
+                    </p>
+                  </div>
+                  <div
+                    class="px-[15px] py-[15px] border-[1px] rounded-[4px] border-[#F0F3FA] bg-[#fff] flex items-center justify-start text-center gap-[15px]"
+                  >
+                    <p
+                      class="text-[14px] font-normal text-[#71717A] text-center"
+                    >
+                      Balance Required
+                    </p>
+                    <p
+                      class="text-[16px] text-[#71717A] font-medium text-center"
+                    >
+                      1,000 USD
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="col-span-2 bg-white px-[25px] py-[25px] flex flex-col gap-[10px] border-[1px] rounded-[4px]"
+              >
+                <p class="text-[#18181B] text-[20px] font-medium">
+                  Total trading Volume: 500,000 USD
+                </p>
+                <p class="text-[14px] font-normal text-[#979797] max-w-[555px]">
+                  If your account balance is between 500–999 USD, your total
+                  trading volume within the last 30 days needs to be equivalent
+                  to at least 500,000 USD, in any currency or asset.
+                </p>
+                <div class="flex justify-between w-full mt-[5px]">
+                  <div
+                    class="px-[15px] py-[15px] border-[1px] rounded-[4px] border-[#13B440] bg-[#E5FFF5] flex items-center justify-start text-center gap-[15px]"
+                  >
+                    <p
+                      class="text-[14px] font-normal text-[#13B440] text-center"
+                    >
+                      Current Balance
+                    </p>
+                    <p
+                      class="text-[16px] text-[#13B440] font-medium text-center"
+                    >
+                      500 USD
+                    </p>
+                  </div>
+                  <div
+                    class="px-[15px] py-[15px] border-[1px] rounded-[4px] border-[#F0F3FA] bg-[#fff] flex items-center justify-start text-center gap-[15px]"
+                  >
+                    <p
+                      class="text-[14px] font-normal text-[#71717A] text-center"
+                    >
+                      Balance Required
+                    </p>
+                    <p
+                      class="text-[16px] text-[#71717A] font-medium text-center"
+                    >
+                      1,000 USD
+                    </p>
+                  </div>
+                </div>
+                <div class="flex justify-between w-full mt-[5px]">
+                  <div
+                    class="px-[15px] py-[15px] border-[1px] rounded-[4px] border-[#13B440] bg-[#E5FFF5] flex items-center justify-start text-center gap-[15px]"
+                  >
+                    <p
+                      class="text-[14px] font-normal text-[#13B440] text-center"
+                    >
+                      Current Balance
+                    </p>
+                    <p
+                      class="text-[16px] text-[#13B440] font-medium text-center"
+                    >
+                      500 USD
+                    </p>
+                  </div>
+                  <div
+                    class="px-[15px] py-[15px] border-[1px] rounded-[4px] border-[#F0F3FA] bg-[#fff] flex items-center justify-start text-center gap-[15px]"
+                  >
+                    <p
+                      class="text-[14px] font-normal text-[#71717A] text-center"
+                    >
+                      Volume Required
+                    </p>
+                    <p
+                      class="text-[16px] text-[#71717A] font-medium text-center"
+                    >
+                      500,000 USD
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="bg-white px-[25px] py-[25px] flex flex-col gap-[10px] border-[1px] rounded-[4px]"
+              >
+                <div class="flex items-start gap-[10px]">
+                  <img src="/assets/svg/speedometer.svg" alt="speedometer" />
+                  <p class="text-[#18181B] text-[16px] font-medium">Speed</p>
+                </div>
+                <p class="text-[14px] font-normal text-[#979797]">
+                  Your balance across all your trading accounts needs to be at
+                  least 1,000 USD to immediately qualify for a free VPS. If your
+                  balance is between 500–999 USD, you can still get a free VPS
+                  if you meet the trading volume requirements below.
+                </p>
+              </div>
+              <div
+                class="bg-white px-[25px] py-[25px] flex flex-col gap-[10px] border-[1px] rounded-[4px]"
+              >
+                <div class="flex items-start gap-[10px]">
+                  <img src="/assets/svg/brain.svg" alt="brain" />
+                  <p class="text-[#18181B] text-[16px] font-medium">
+                    Stability
+                  </p>
+                </div>
+                <p class="text-[14px] font-normal text-[#979797]">
+                  Running your Expert Advisor on a VPS ensures that the EA's
+                  execution runs seamlessly, regardless of the quality of your
+                  internet connection.
+                </p>
+              </div>
+              <div
+                class="bg-white px-[25px] py-[25px] flex flex-col gap-[10px] border-[1px] rounded-[4px]"
+              >
+                <div class="flex items-start gap-[10px]">
+                  <img src="/assets/svg/24-support.svg" alt="24-support" />
+                  <p class="text-[#18181B] text-[16px] font-medium">
+                    24-hour trading
+                  </p>
+                </div>
+                <p class="text-[14px] font-normal text-[#979797]">
+                  Trade on the financial markets using Expert Advisors even when
+                  your own computer is turned off.
+                </p>
+              </div>
+              <div
+                class="bg-white px-[25px] py-[25px] flex flex-col gap-[10px] border-[1px] rounded-[4px]"
+              >
+                <div class="flex items-start gap-[10px]">
+                  <img src="/assets/svg/computer.svg" alt="computer" />
+                  <p class="text-[#18181B] text-[16px] font-medium">
+                    Mobility & portability
+                  </p>
+                </div>
+                <p class="text-[14px] font-normal text-[#979797]">
+                  Access your account and trade on the financial markets from
+                  anywhere in the world. VPS is available on any operating
+                  system.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -33,3 +33,18 @@ function activateTabItem(selectedTab, contentId) {
   // Show the corresponding tab content
   document.getElementById(contentId).classList.add("active");
 }
+
+
+function activateMyAccountsTab(selectedTab, contentId) {
+    // Remove 'active' class from all tabs
+    document.querySelectorAll("#myAccountsTabs .tab").forEach(tab => tab.classList.remove("active"));
+
+    // Add 'active' class to the selected tab
+    selectedTab.classList.add("active");
+
+    // Hide all tab content
+    document.querySelectorAll(".my-accounts-content").forEach(content => content.classList.remove("active"));
+
+    // Show the corresponding tab content
+    document.getElementById(contentId).classList.add("active");
+}

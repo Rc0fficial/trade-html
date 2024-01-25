@@ -183,19 +183,301 @@
       <section id="myAccounts" class="main-tab-content active w-full h-full">
         <!-- Content for My Accounts tab -->
         <div
-          class="
-           mx-auto bg-[#fafafa] w-full px-[25px] py-[25px] flex flex-col gap-[25px]"
-        > 
-        <div
-        class="bg-[#E5FFF5] px-[25px] py-[15px] flex flex-col gap-[6px] border-[1px] rounded-[4px] border-[#13B440]"
-      >
-        <p class="text-[#13B440] text-[20px] font-[600]">
-            Invite more and Earn more
-        </p>
-        <p class="text-[12px] font-normal text-[#13B440] max-w-[555px]">
-            Invite a friend and earn up to 50% of our revenue
-        </p>
-      </div></div>
+          class="mx-auto bg-[#fafafa] w-full px-[25px] py-[25px] flex flex-col gap-[25px]"
+        >
+          <div class="flex items-start justify-between w-full">
+            <div
+              class="bg-[#E5FFF5] px-[25px] py-[15px] border-[1px] rounded-[4px] border-[#13B440] flex items-center justify-between w-full"
+            >
+              <div class="flex flex-col gap-[6px]">
+                <p class="text-[#13B440] text-[20px] font-[600]">
+                  Invite more and Earn more
+                </p>
+                <p class="text-[12px] font-normal text-[#13B440] max-w-[555px]">
+                  Invite a friend and earn up to 50% of our revenue
+                </p>
+              </div>
+              <div class="flex gap-[15px]">
+                <button
+                  class="bg-[#13B440] py-[8px] px-[35px] text-center text-[12px] font-[500] text-[#fff] rounded-[4px] cursor-pointer max-w-[150px]"
+                >
+                  Invite Now
+                </button>
+                <button
+                  class="bg-[#E5FFF5] py-[8px] px-[35px] text-center text-[12px] font-[500] text-[#13B440] border border-[#13B440] rounded-[4px] cursor-pointer max-w-[150px]"
+                >
+                  Maybe Later
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-white px-[25px] py-[15px] flex flex-col gap-[20px] border-[1px] rounded-[4px]"
+          >
+            <p class="text-[#18181B] text-[20px] font-medium">My Accounts</p>
+            <div
+              id="myAccountsTabs"
+              class="flex items-start justify-start gap-[10px]"
+            > 
+              <div
+                class="tab flex items-center justify-center bg-[#F0F3FA] py-[4px] px-[24px] text-center text-[12px] font-[500] text-[#71717A] rounded-[4px] cursor-pointer"
+                onclick="activateMyAccountsTab(this, 'realAccounts')"
+              >
+                Real
+              </div>
+              
+              <div
+                class="tab flex items-center justify-center bg-[#F0F3FA] py-[4px] px-[24px] text-center text-[12px] font-[500] text-[#71717A] rounded-[4px] cursor-pointer"
+                onclick="activateMyAccountsTab(this, 'demoAccounts')"
+              >
+                Demo
+              </div>
+              <div
+                class="tab flex items-center justify-center bg-[#F0F3FA] py-[4px] px-[24px] text-center text-[12px] font-[500] text-[#71717A] rounded-[4px] cursor-pointer"
+                onclick="activateMyAccountsTab(this, 'archiveAccounts')"
+              >
+                Archive
+              </div>
+              <div
+                class="tab flex items-center justify-center bg-[#F0F3FA] py-[4px] px-[24px] text-center text-[12px] font-[500] text-[#71717A] rounded-[4px] cursor-pointer"
+                onclick="activateMyAccountsTab(this, 'openNewAccount')"
+              >
+                + Open New Account
+              </div>
+            </div>
+          </div>
+          <div id="realAccounts" class="my-accounts-content">
+            <!-- Content for Real Accounts tab -->
+            <div
+              class="bg-white px-[25px] py-[15px] flex flex-col gap-[20px] border-[1px] rounded-[4px]"
+            >
+              <div class="flex items-center justify-start gap-[10px]">
+                <div class="mr-[5px]">
+                  <p class="text-[#979797] text-[16px] font-normal">
+                    Noman Chaudhary
+                  </p>
+                </div>
+                <div
+                  class="text-[#979797] text-[14px] font-medium border boder-[#F0F3FA] rounded-[4px] px-[10px] py-[2px] cursor-pointer"
+                >
+                  Real
+                </div>
+                <div
+                  class="text-[#979797] text-[14px] font-medium border boder-[#F0F3FA] rounded-[4px] px-[10px] py-[2px] cursor-pointer"
+                >
+                  MT5
+                </div>
+                <div
+                  class="text-[#979797] text-[14px] font-medium border boder-[#F0F3FA] rounded-[4px] px-[10px] py-[2px] cursor-pointer"
+                >
+                  Standard
+                </div>
+                <div
+                  class="text-[#979797] text-[14px] font-medium border boder-[#F0F3FA] rounded-[4px] px-[10px] py-[2px] cursor-pointer"
+                >
+                  54235
+                </div>
+              </div>
+              <div>
+                <div class="flex items-center justify-start gap-[13px]">
+                  <h2 class="text-[#18181B] text-[24px] font-medium">
+                    2,534.00
+                  </h2>
+
+                  <div
+                    class="flex items-center justify-start gap-[5px] text-[#13B440] bg-[#E5FFF5] text-[12px] font-medium rounded-[4px] px-[10px] py-[2px] cursor-pointer"
+                  >
+                    <img src="/assets/svg/arrow-curl.svg" alt="arrow-curl" />
+                    243.28%
+                  </div>
+                </div>
+                <p class="text-[#979797] text-[12px] font-normal">USD</p>
+              </div>
+              <div class="flex gap-[15px]">
+                <button
+                  class="bg-[#13B440] py-[8px] px-[20px] text-center text-[12px] font-[500] text-[#fff] rounded-[4px] cursor-pointer max-w-[150px]"
+                >
+                  Trade
+                </button>
+                <button
+                  class="flex items-center justify-start gap-[5px] bg-[#fff] py-[8px] px-[20px] text-center text-[12px] font-[400] text-[#979797] border border-[#E3E3E3] rounded-[4px] cursor-pointer max-w-[150px]"
+                >
+                  <img src="/assets//svg/atm.svg" alt="atm" />
+                  Withdraw
+                </button>
+                <button
+                  class="flex items-center justify-start gap-[5px] bg-[#fff] py-[8px] px-[20px] text-center text-[12px] font-[400] text-[#979797] border border-[#E3E3E3] rounded-[4px] cursor-pointer max-w-[150px]"
+                >
+                  <img src="/assets//svg/camera.svg" alt="camera" />
+                  Deposit
+                </button>
+                <button
+                  class="flex items-center justify-start gap-[5px] bg-[#fff] py-[8px] px-[20px] text-center text-[12px] font-[400] text-[#979797] border border-[#E3E3E3] rounded-[4px] cursor-pointer max-w-[150px]"
+                >
+                  More Options
+                  <img src="/assets/svg/chevron-down.svg" alt="chevron-down" />
+                </button>
+              </div>
+            </div>
+            <div
+              class="bg-white px-[25px] py-[15px] flex flex-col gap-[20px] border-[1px] rounded-[4px] mt-[25px]"
+            >
+              <div class="flex items-center justify-start gap-[10px]">
+                <div class="mr-[5px]">
+                  <p class="text-[#979797] text-[16px] font-normal">
+                    Noman Chaudhary
+                  </p>
+                </div>
+                <div
+                  class="text-[#979797] text-[14px] font-medium border boder-[#F0F3FA] rounded-[4px] px-[10px] py-[2px] cursor-pointer"
+                >
+                  Real
+                </div>
+                <div
+                  class="text-[#979797] text-[14px] font-medium border boder-[#F0F3FA] rounded-[4px] px-[10px] py-[2px] cursor-pointer"
+                >
+                  MT5
+                </div>
+                <div
+                  class="text-[#979797] text-[14px] font-medium border boder-[#F0F3FA] rounded-[4px] px-[10px] py-[2px] cursor-pointer"
+                >
+                  Standard
+                </div>
+                <div
+                  class="text-[#979797] text-[14px] font-medium border boder-[#F0F3FA] rounded-[4px] px-[10px] py-[2px] cursor-pointer"
+                >
+                  54235
+                </div>
+              </div>
+              <div>
+                <div class="flex items-center justify-start gap-[13px]">
+                  <h2 class="text-[#18181B] text-[24px] font-medium">
+                    2,534.00
+                  </h2>
+
+                  <div
+                    class="flex items-center justify-start gap-[5px] text-[#13B440] bg-[#E5FFF5] text-[12px] font-medium rounded-[4px] px-[10px] py-[2px] cursor-pointer"
+                  >
+                    <img src="/assets/svg/arrow-curl.svg" alt="arrow-curl" />
+                    243.28%
+                  </div>
+                </div>
+                <p class="text-[#979797] text-[12px] font-normal">USD</p>
+              </div>
+              <div class="flex gap-[15px]">
+                <button
+                  class="bg-[#13B440] py-[8px] px-[20px] text-center text-[12px] font-[500] text-[#fff] rounded-[4px] cursor-pointer max-w-[150px]"
+                >
+                  Trade
+                </button>
+                <button
+                  class="flex items-center justify-start gap-[5px] bg-[#fff] py-[8px] px-[20px] text-center text-[12px] font-[400] text-[#979797] border border-[#E3E3E3] rounded-[4px] cursor-pointer max-w-[150px]"
+                >
+                  <img src="/assets//svg/atm.svg" alt="atm" />
+                  Withdraw
+                </button>
+                <button
+                  class="flex items-center justify-start gap-[5px] bg-[#fff] py-[8px] px-[20px] text-center text-[12px] font-[400] text-[#979797] border border-[#E3E3E3] rounded-[4px] cursor-pointer max-w-[150px]"
+                >
+                  <img src="/assets//svg/camera.svg" alt="camera" />
+                  Deposit
+                </button>
+                <button
+                  class="flex items-center justify-start gap-[5px] bg-[#fff] py-[8px] px-[20px] text-center text-[12px] font-[400] text-[#979797] border border-[#E3E3E3] rounded-[4px] cursor-pointer max-w-[150px]"
+                >
+                  More Options
+                  <img src="/assets/svg/chevron-down.svg" alt="chevron-down" />
+                </button>
+              </div>
+            </div>
+            <div
+              class="bg-white px-[25px] py-[15px] flex flex-col gap-[20px] border-[1px] rounded-[4px] mt-[25px]"
+            >
+              <div class="flex items-center justify-start gap-[10px]">
+                <div class="mr-[5px]">
+                  <p class="text-[#979797] text-[16px] font-normal">
+                    Noman Chaudhary
+                  </p>
+                </div>
+                <div
+                  class="text-[#979797] text-[14px] font-medium border boder-[#F0F3FA] rounded-[4px] px-[10px] py-[2px] cursor-pointer"
+                >
+                  Real
+                </div>
+                <div
+                  class="text-[#979797] text-[14px] font-medium border boder-[#F0F3FA] rounded-[4px] px-[10px] py-[2px] cursor-pointer"
+                >
+                  MT5
+                </div>
+                <div
+                  class="text-[#979797] text-[14px] font-medium border boder-[#F0F3FA] rounded-[4px] px-[10px] py-[2px] cursor-pointer"
+                >
+                  Standard
+                </div>
+                <div
+                  class="text-[#979797] text-[14px] font-medium border boder-[#F0F3FA] rounded-[4px] px-[10px] py-[2px] cursor-pointer"
+                >
+                  54235
+                </div>
+              </div>
+              <div>
+                <div class="flex items-center justify-start gap-[13px]">
+                  <h2 class="text-[#18181B] text-[24px] font-medium">
+                    2,534.00
+                  </h2>
+
+                  <div
+                    class="flex items-center justify-start gap-[5px] text-[#13B440] bg-[#E5FFF5] text-[12px] font-medium rounded-[4px] px-[10px] py-[2px] cursor-pointer"
+                  >
+                    <img src="/assets/svg/arrow-curl.svg" alt="arrow-curl" />
+                    243.28%
+                  </div>
+                </div>
+                <p class="text-[#979797] text-[12px] font-normal">USD</p>
+              </div>
+              <div class="flex gap-[15px]">
+                <button
+                  class="bg-[#13B440] py-[8px] px-[20px] text-center text-[12px] font-[500] text-[#fff] rounded-[4px] cursor-pointer max-w-[150px]"
+                >
+                  Trade
+                </button>
+                <button
+                  class="flex items-center justify-start gap-[5px] bg-[#fff] py-[8px] px-[20px] text-center text-[12px] font-[400] text-[#979797] border border-[#E3E3E3] rounded-[4px] cursor-pointer max-w-[150px]"
+                >
+                  <img src="/assets//svg/atm.svg" alt="atm" />
+                  Withdraw
+                </button>
+                <button
+                  class="flex items-center justify-start gap-[5px] bg-[#fff] py-[8px] px-[20px] text-center text-[12px] font-[400] text-[#979797] border border-[#E3E3E3] rounded-[4px] cursor-pointer max-w-[150px]"
+                >
+                  <img src="/assets//svg/camera.svg" alt="camera" />
+                  Deposit
+                </button>
+                <button
+                  class="flex items-center justify-start gap-[5px] bg-[#fff] py-[8px] px-[20px] text-center text-[12px] font-[400] text-[#979797] border border-[#E3E3E3] rounded-[4px] cursor-pointer max-w-[150px]"
+                >
+                  More Options
+                  <img src="/assets/svg/chevron-down.svg" alt="chevron-down" />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div id="demoAccounts" class="my-accounts-content">
+            <!-- Content for Demo Accounts tab -->
+            Demo Accounts Content
+          </div>
+
+          <div id="archiveAccounts" class="my-accounts-content">
+            <!-- Content for Archive Accounts tab -->
+            Archive Accounts Content
+          </div>
+
+          <div id="openNewAccount" class="my-accounts-content">
+            <!-- Content for Open New Account tab -->
+            Open New Account Content
+          </div>
+        </div>
       </section>
       <section id="settings" class="main-tab-content w-full h-full">
         <!-- Content for Deposit tab -->

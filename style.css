@@ -11,24 +11,42 @@
     display: block;
   }
 
-/* Style for active main tab */
 .main-tab.active {
     background-color: #E5FFF5;
     border-left: #13B440 3px solid;
 }
 
-/* Style for active main tab text */
 .main-tab.active .tab-text {
     color: #13B440;
 }
 
-/* Style for active main tab content */
 .main-tab-content.active {
     display: block;
 }
 
-/* Hide all main tab content by default */
 .main-tab-content {
     display: none;
+}
+
+
+
+#myAccountsTabs {
+    display: flex;
+    gap: 10px;
+}
+
+
+.my-accounts-content {
+    display: none; 
+}
+
+.my-accounts-content.active {
+    display: block;
+}
+
+#myAccountsTabs .tab.active {
+    background-color: #373737;
+    color: white; 
+    
 }
 

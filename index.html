@@ -218,31 +218,60 @@
             <div
               id="myAccountsTabs"
               class="flex items-start justify-start gap-[10px]"
-            > 
-              <div
-                class="tab flex items-center justify-center bg-[#F0F3FA] py-[4px] px-[24px] text-center text-[12px] font-[500] text-[#71717A] rounded-[4px] cursor-pointer"
-                onclick="activateMyAccountsTab(this, 'realAccounts')"
-              >
-                Real
-              </div>
-              
-              <div
-                class="tab flex items-center justify-center bg-[#F0F3FA] py-[4px] px-[24px] text-center text-[12px] font-[500] text-[#71717A] rounded-[4px] cursor-pointer"
-                onclick="activateMyAccountsTab(this, 'demoAccounts')"
-              >
-                Demo
-              </div>
-              <div
-                class="tab flex items-center justify-center bg-[#F0F3FA] py-[4px] px-[24px] text-center text-[12px] font-[500] text-[#71717A] rounded-[4px] cursor-pointer"
-                onclick="activateMyAccountsTab(this, 'archiveAccounts')"
-              >
-                Archive
-              </div>
-              <div
-                class="tab flex items-center justify-center bg-[#F0F3FA] py-[4px] px-[24px] text-center text-[12px] font-[500] text-[#71717A] rounded-[4px] cursor-pointer"
-                onclick="activateMyAccountsTab(this, 'openNewAccount')"
-              >
-                + Open New Account
+            >
+              <div class="flex justify-between w-full">
+                <div class="flex gap-[10px]">
+                  <div
+                    class="tab flex items-center justify-center bg-[#F0F3FA] py-[4px] px-[24px] text-center text-[12px] font-[500] text-[#71717A] rounded-[4px] cursor-pointer"
+                    onclick="activateMyAccountsTab(this, 'realAccounts')"
+                  >
+                    Real
+                  </div>
+
+                  <div
+                    class="tab flex items-center justify-center bg-[#F0F3FA] py-[4px] px-[24px] text-center text-[12px] font-[500] text-[#71717A] rounded-[4px] cursor-pointer"
+                    onclick="activateMyAccountsTab(this, 'demoAccounts')"
+                  >
+                    Demo
+                  </div>
+                  <div
+                    class="tab flex items-center justify-center bg-[#F0F3FA] py-[4px] px-[24px] text-center text-[12px] font-[500] text-[#71717A] rounded-[4px] cursor-pointer"
+                    onclick="activateMyAccountsTab(this, 'archiveAccounts')"
+                  >
+                    Archive
+                  </div>
+                  <div
+                    class="tab flex items-center justify-center bg-[#F0F3FA] py-[4px] px-[24px] text-center text-[12px] font-[500] text-[#71717A] rounded-[4px] cursor-pointer"
+                    onclick="activateMyAccountsTab(this, 'openNewAccount')"
+                  >
+                    + Open New Account
+                  </div>
+                </div>
+                <div class="flex gap-[15px]">
+                  <div>
+                    <button
+                      class="flex items-center justify-start gap-[25px] bg-[#fff] py-[6px] px-[15px] text-center text-[12px] font-[400] text-[#979797] border border-[#E3E3E3] rounded-[4px] cursor-pointer max-w-[150px]"
+                    >
+                      Newest
+                      <img
+                        src="/assets/svg/chevron-down.svg"
+                        alt="chevron-down"
+                      />
+                    </button>
+                  </div>
+                  <div class="flex">
+                    <button
+                      class="flex items-center justify-start gap-[5px] bg-[#fff] py-[6px] px-[15px] text-center text-[12px] font-[400] text-[#979797] border border-[#E3E3E3] rounded-[4px] cursor-pointer max-w-[150px]"
+                    >
+                      <img src="/assets/svg/options.svg" alt="options" />
+                    </button>
+                    <button
+                      class="flex items-center justify-start gap-[5px] bg-[#fff] py-[6px] px-[15px] text-center text-[12px] font-[400] text-[#979797] border border-[#E3E3E3] rounded-[4px] cursor-pointer max-w-[150px]"
+                    >
+                      <img src="/assets/svg/menu.svg" alt="menu" />
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
